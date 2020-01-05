@@ -1,12 +1,12 @@
-import Duck from './duck';
-import FlyNoWay from './fly-no-way';
-import Quack from './quack';
+import Duck from "./duck";
+import FlyNoWay from "./fly-no-way";
+import Squeak from "./squeak";
 
 export default class ModelDuck extends Duck {
   constructor() {
     super();
     this.flyBehavior = new FlyNoWay();
-    this.quackBehavior = new Quack();
+    this.quackBehavior = new Squeak();
   }
 
   display() {
