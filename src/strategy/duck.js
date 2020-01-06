@@ -1,3 +1,5 @@
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["display", "swim"] }] */
+
 import FlyBehavior from './fly-behavior';
 import QuackBehavior from './quack-behavior';
 

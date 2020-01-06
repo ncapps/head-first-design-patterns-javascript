@@ -1,6 +1,8 @@
-import Duck from "./duck";
-import FlyWithWings from "./fly-with-wings";
-import Quack from "./quack";
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["display"] }] */
+
+import Duck from './duck';
+import FlyWithWings from './fly-with-wings';
+import Quack from './quack';
 
 export default class MallardDuck extends Duck {
   constructor() {

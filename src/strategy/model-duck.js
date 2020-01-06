@@ -1,6 +1,8 @@
-import Duck from "./duck";
-import FlyNoWay from "./fly-no-way";
-import Squeak from "./squeak";
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["display"] }] */
+
+import Duck from './duck';
+import FlyNoWay from './fly-no-way';
+import Squeak from './squeak';
 
 export default class ModelDuck extends Duck {
   constructor() {
