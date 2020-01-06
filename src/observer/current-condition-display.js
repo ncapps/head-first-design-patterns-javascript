@@ -1,5 +1,7 @@
-import Observer from "./observer";
-import WeatherData from "./weather-data";
+/* eslint no-unused-vars: ["error", { "args": "none" }] */
+
+import Observer from './observer';
+import WeatherData from './weather-data';
 
 export default class CurrentConditionDisplay extends Observer {
   constructor(subject) {
@@ -10,7 +12,7 @@ export default class CurrentConditionDisplay extends Observer {
     subject.registerObserver(this);
   }
 
-  update(subject, arg) {
+  update(subject, args) {
     if (subject instanceof WeatherData) {
       const weatherData = subject;
       this.temperature = weatherData.getTemperature();
@@ -21,7 +23,7 @@ export default class CurrentConditionDisplay extends Observer {
 
   display() {
     console.log(
-      `Current conditions: ${this.temperature} F degrees and ${this.humidity}% humidity`
+      `Current conditions: ${this.temperature} F degrees and ${this.humidity}% humidity`,
     );
   }
 }

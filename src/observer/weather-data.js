@@ -1,4 +1,6 @@
-import Subject from "./subject";
+/* eslint no-unused-vars: ["error", { "args": "none" }] */
+
+import Subject from './subject';
 
 export default class WeatherData extends Subject {
   constructor() {
@@ -23,11 +25,11 @@ export default class WeatherData extends Subject {
     this.observers.splice(i, 1);
   }
 
-  notifyObservers(arg) {
+  notifyObservers(args) {
     if (this.changed) {
-      for (let observer of this.observers) {
-        observer.update(this, arg);
-      }
+      this.observers.forEach((observer) => {
+        observer.update(this, args);
+      });
       this.changed = false;
     }
   }

@@ -1,5 +1,7 @@
-import Observer from "./observer";
-import WeatherData from "./weather-data";
+/* eslint no-unused-vars: ["error", { "args": "none" }] */
+
+import Observer from './observer';
+import WeatherData from './weather-data';
 
 export default class ForecastDisplay extends Observer {
   constructor(subject) {
@@ -10,7 +12,7 @@ export default class ForecastDisplay extends Observer {
     subject.registerObserver(this);
   }
 
-  update(subject, arg) {
+  update(subject, args) {
     if (subject instanceof WeatherData) {
       const weatherData = subject;
       this.lastPressure = this.currentPressure;
@@ -21,11 +23,11 @@ export default class ForecastDisplay extends Observer {
 
   display() {
     if (this.currentPressure > this.lastPressure) {
-      console.log("Forecast: Improving weather on the way!");
+      console.log('Forecast: Improving weather on the way!');
     } else if (this.currentPressure < this.lastPressure) {
-      console.log("Forecast: Watch out for cooler, rainy weather");
+      console.log('Forecast: Watch out for cooler, rainy weather');
     } else {
-      console.log("Forecast: More of the same");
+      console.log('Forecast: More of the same');
     }
   }
 }

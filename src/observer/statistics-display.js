@@ -1,5 +1,7 @@
-import Observer from "./observer";
-import WeatherData from "./weather-data";
+/* eslint no-unused-vars: ["error", { "args": "none" }] */
+
+import Observer from './observer';
+import WeatherData from './weather-data';
 
 export default class StatisticsDisplay extends Observer {
   constructor(subject) {
@@ -12,12 +14,12 @@ export default class StatisticsDisplay extends Observer {
     subject.registerObserver(this);
   }
 
-  update(subject, arg) {
+  update(subject, args) {
     if (subject instanceof WeatherData) {
       const weatherData = subject;
       const temp = weatherData.getTemperature();
       this.tempSum += temp;
-      this.numReadings++;
+      this.numReadings += 1;
 
       if (temp > this.maxTemp) {
         this.maxTemp = temp;
@@ -35,7 +37,7 @@ export default class StatisticsDisplay extends Observer {
     console.log(
       `Avg/Max/Min temperature = ${this.tempSum / this.numReadings}/${
         this.maxTemp
-      }/${this.minTemp}`
+      }/${this.minTemp}`,
     );
   }
 }
