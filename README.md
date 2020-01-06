@@ -35,4 +35,4 @@
 - Subjects update Observers using a common interface
 - Observers are loosely coupled in that the Observable knows nothing about them, other than that they implement the Observer interface
 - You can push or pull data, with preference for pull
--
+- Don't depend on a specific order of notifications from Observers
