@@ -1,5 +1,5 @@
-import CondimentDecorator from "./condiment-decorator";
-import { Size } from "./beverage";
+import CondimentDecorator from './condiment-decorator';
+import { Size } from './beverage';
 
 export default class Soy extends CondimentDecorator {
   constructor(beverage) {
@@ -8,7 +8,7 @@ export default class Soy extends CondimentDecorator {
   }
 
   getDescription() {
-    return this.beverage.getDescription() + ", Soy";
+    return `${this.beverage.getDescription()}, Soy`;
   }
 
   cost() {

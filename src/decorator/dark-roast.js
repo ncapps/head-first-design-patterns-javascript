@@ -1,9 +1,11 @@
-import { Beverage } from "./beverage";
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["cost"] }] */
+
+import { Beverage } from './beverage';
 
 export default class DarkRoast extends Beverage {
   constructor() {
     super();
-    this.description = "Dark Roast Coffee";
+    this.description = 'Dark Roast Coffee';
   }
 
   cost() {

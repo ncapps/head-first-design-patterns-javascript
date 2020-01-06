@@ -1,9 +1,9 @@
-import Espresso from "./espresso";
-import DarkRoast from "./dark-roast";
-import Mocha from "./mocha";
-import Whip from "./whip";
-import HouseBlend from "./house-blend";
-import Soy from "./soy";
+import Espresso from './espresso';
+import DarkRoast from './dark-roast';
+import Mocha from './mocha';
+import Whip from './whip';
+import HouseBlend from './house-blend';
+import Soy from './soy';
 
 const espresso = new Espresso();
 console.log(`${espresso.getDescription()} $${espresso.cost()}`);

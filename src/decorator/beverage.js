@@ -1,9 +1,11 @@
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["cost"] }] */
+
 export const Size = { TALL: 0, GRANDE: 1, VENTI: 2 };
 
 export class Beverage {
   constructor() {
     this.size = Size.TALL;
-    this.description = "Unknown Beverage";
+    this.description = 'Unknown Beverage';
   }
 
   getDescription() {
@@ -11,7 +13,7 @@ export class Beverage {
   }
 
   cost() {
-    throw new Error("Abstract method");
+    throw new Error('Abstract method');
   }
 
   setSize(size) {

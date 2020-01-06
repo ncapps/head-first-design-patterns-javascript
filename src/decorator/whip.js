@@ -1,4 +1,4 @@
-import CondimentDecorator from "./condiment-decorator";
+import CondimentDecorator from './condiment-decorator';
 
 export default class Whip extends CondimentDecorator {
   constructor(beverage) {
@@ -7,7 +7,7 @@ export default class Whip extends CondimentDecorator {
   }
 
   getDescription() {
-    return this.beverage.getDescription() + ", Whip";
+    return `${this.beverage.getDescription()}, Whip`;
   }
 
   cost() {

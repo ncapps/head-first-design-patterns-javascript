@@ -1,4 +1,4 @@
-import CondimentDecorator from "./condiment-decorator";
+import CondimentDecorator from './condiment-decorator';
 
 export default class Mocha extends CondimentDecorator {
   constructor(beverage) {
@@ -7,7 +7,7 @@ export default class Mocha extends CondimentDecorator {
   }
 
   getDescription() {
-    return this.beverage.getDescription() + ", Mocha";
+    return `${this.beverage.getDescription()}, Mocha`;
   }
 
   cost() {
