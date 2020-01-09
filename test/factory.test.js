@@ -1,4 +1,5 @@
 import Pizza from '../src/factory/pizza';
+import NYPizzaStore from '../src/factory/ny-pizza-store';
 
 let logs = '';
 const storeLog = (log) => {
@@ -54,5 +55,29 @@ Marinara
 Onion
 Garlic
 `);
+  });
+});
+
+describe('NY pizza store', () => {
+  const nyStore = new NYPizzaStore();
+
+  it('cheese', () => {
+    const pizza = nyStore.orderPizza('cheese');
+    expect(pizza.getName()).toBe('NY Style Sauce and Cheese Pizza');
+  });
+
+  it('veggie', () => {
+    const pizza = nyStore.orderPizza('veggie');
+    expect(pizza.getName()).toBe('NY Style Veggie Pizza');
+  });
+
+  it('clam', () => {
+    const pizza = nyStore.orderPizza('clam');
+    expect(pizza.getName()).toBe('NY Style Clam Pizza');
+  });
+
+  it('pepperoni', () => {
+    const pizza = nyStore.orderPizza('pepperoni');
+    expect(pizza.getName()).toBe('NY Style Pepperonie Pizza');
   });
 });
