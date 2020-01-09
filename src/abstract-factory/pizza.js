@@ -40,7 +40,7 @@ export default class Pizza {
     if (this.cheese) display += `${this.cheese}\n`;
     this.veggies.forEach((veggie, i) => {
       display += `${veggie}`;
-      display += (i < this.veggies.length - 1) ? ',' : '\n';
+      display += (i < this.veggies.length - 1) ? ', ' : '\n';
     });
     if (this.clam) display += `${this.clam}\n`;
     if (this.pepperoni) display += `${this.pepperoni}\n`;
