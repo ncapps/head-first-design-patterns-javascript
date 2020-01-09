@@ -1,6 +1,6 @@
-import Pizza from '../src/factory/pizza';
-import NYPizzaStore from '../src/factory/ny-pizza-store';
-import ChicagoPizzaStore from '../src/factory/chicago-pizza-store';
+import Pizza from '../src/factory-method/pizza';
+import NYPizzaStore from '../src/factory-method/ny-pizza-store';
+import ChicagoPizzaStore from '../src/factory-method/chicago-pizza-store';
 
 let logs = '';
 const storeLog = (log) => {
