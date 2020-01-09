@@ -1,5 +1,6 @@
 import Pizza from '../src/factory/pizza';
 import NYPizzaStore from '../src/factory/ny-pizza-store';
+import ChicagoPizzaStore from '../src/factory/chicago-pizza-store';
 
 let logs = '';
 const storeLog = (log) => {
@@ -78,6 +79,46 @@ describe('NY pizza store', () => {
 
   it('pepperoni', () => {
     const pizza = nyStore.orderPizza('pepperoni');
-    expect(pizza.getName()).toBe('NY Style Pepperonie Pizza');
+    expect(pizza.getName()).toBe('NY Style Pepperoni Pizza');
+  });
+});
+
+describe('Chicago pizza store', () => {
+  const chicagoStore = new ChicagoPizzaStore();
+
+  it('cheese', () => {
+    const pizza = chicagoStore.orderPizza('cheese');
+    expect(pizza.getName()).toBe('Chicago Style Deep Dish Cheese Pizza');
+
+    logs = '';
+    pizza.cut();
+    expect(logs).toBe('Cutting the pizza into square slices');
+  });
+
+  it('veggie', () => {
+    const pizza = chicagoStore.orderPizza('veggie');
+    expect(pizza.getName()).toBe('Chicago Deep Dish Veggie Pizza');
+
+    logs = '';
+    pizza.cut();
+    expect(logs).toBe('Cutting the pizza into square slices');
+  });
+
+  it('clam', () => {
+    const pizza = chicagoStore.orderPizza('clam');
+    expect(pizza.getName()).toBe('Chicago Style Clam Pizza');
+
+    logs = '';
+    pizza.cut();
+    expect(logs).toBe('Cutting the pizza into square slices');
+  });
+
+  it('pepperoni', () => {
+    const pizza = chicagoStore.orderPizza('pepperoni');
+    expect(pizza.getName()).toBe('Chicago Style Pepperoni Pizza');
+
+    logs = '';
+    pizza.cut();
+    expect(logs).toBe('Cutting the pizza into square slices');
   });
 });
