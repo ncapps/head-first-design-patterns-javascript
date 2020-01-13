@@ -23,6 +23,7 @@
 3. **Decorator** - Attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
 4. **Factory Method** - Defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 5. **Abstract Factory** - Provides an interface for creating families of related or dependent objects without specifiying their concrete classes.
+6. **Singleton** - Ensures a class has only one instance, and provides a global point of access to it.
 
 ## Introduction to Design Patterns
 
