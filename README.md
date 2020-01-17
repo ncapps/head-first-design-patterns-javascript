@@ -63,3 +63,9 @@
 - Factory Method allows a class to defer instantiation to its subclasses
 - Abstract Factory creates families of related objects without having to depend on their concrete classes
 - Dependency Inversion Principle guides us to avoid dependencies on concrete types and strive for abstractions
+
+## Singleton Summary
+- Singleton ensures you have at most one instane of a class in your application
+- Provides a global access point to that instance
+- Makes use of a private constructor and a static method combined with a static variable
+- Take care when implementing a Singleton for multithreaded applications
