@@ -1,21 +1,25 @@
 export default class GarageDoor {
+  constructor(location) {
+    this.location = location;
+  }
+
   up() {
-    return 'Garage door is open';
+    return (this.location) ? `${this.location} garage door is open` : 'Garage door is open';
   }
 
   down() {
-    return 'Garage door is closed';
+    return `${this.location} garage door is closed`;
   }
 
   stop() {
-    return 'Garage door is stopped';
+    return `${this.location} garage door is stopped`;
   }
 
   lightOn() {
-    return 'Garage light is on';
+    return `${this.location} garage light is on`;
   }
 
   lightOff() {
-    return 'Garage light is off';
+    return `${this.location} garage light is off`;
   }
 }

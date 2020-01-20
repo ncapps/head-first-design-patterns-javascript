@@ -1,16 +1,16 @@
 import Command from './command';
 
-export default class LightOnCommand extends Command {
+export default class LightOffCommand extends Command {
   constructor(light) {
     super();
     this.light = light;
   }
 
   execute() {
-    return this.light.on();
+    return this.light.off();
   }
 
   undo() {
-    return this.light.off();
+    return this.light.on();
   }
 }
