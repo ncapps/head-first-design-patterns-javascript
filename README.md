@@ -24,6 +24,7 @@
 4. **Factory Method** - Defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 5. **Abstract Factory** - Provides an interface for creating families of related or dependent objects without specifiying their concrete classes.
 6. **Singleton** - Ensures a class has only one instance, and provides a global point of access to it.
+7. **Command** - Encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations
 
 ## Introduction to Design Patterns
 
@@ -69,3 +70,13 @@
 - Provides a global access point to that instance
 - Makes use of a private constructor and a static method combined with a static variable
 - Take care when implementing a Singleton for multithreaded applications
+
+## Command
+- Command pattern decouples an object making a request from the one that knows how to perform it
+- A Command object enables this decoupling and encapsulates a receiver with an action
+- An invoker makes a request of a Command object by calling its execute() method, which invokes those actions on the receive
+- Invokers can be parameterized with Commands at runtime
+- Commands can support undo by implementing an undo method that restores the object to its previous state before the execute() method was last called
+- Macro commands are a simple extension of Command that allow multiple commands to be invoked
+- Commands are typically "dumb" and delegate implementation to a receiver
+- Command can be used to implement logging systems
