@@ -14,8 +14,9 @@
 - Program to interfaces, not implementations
 - Strive for loosely coupled designs between objects that interact
 - Classes should be open for extension, but closed for modification
-- Depend upon abstractions. Do not depend upon concrete classes
+- Dependency Inversion Principle: Depend upon abstractions. Do not depend upon concrete classes
 - Principle of Least Knowledge: talk only to your immediate friends
+- Hollywood Principle: Don't call us, we'll call you
 
 ## OO Patterns
 
@@ -28,6 +29,7 @@
 7. **Command** - Encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations
 8. **Adapter** - Converts the interface of a class into another interface the clients expect. Adapter lets clases work together that couldn't otherwise because of incompatible interfaces.
 9. **Facade** - Provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+10. **Template Method** - Defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.
 
 ## Introduction to Design Patterns
 
@@ -93,3 +95,13 @@
 - An Adapter changes an interface into one a client expects
 - A facade decouples a client from a complex subsystem
 - An Adapter wraps an object to change its interface, a Decorator wraps an object to add new behaviors and responsibilities, and a Facade wraps a set of objects to simplify
+
+## Template Method Summary
+
+- Template Method defines the steps of an algorithm, deferring to subclasses for the implementation of those steps
+- Template method's absctract class my define concrete methods, abstract methods, and hooks
+- Abstract methods are implmented by subclasses
+- Hooks are methods that do nothing or default behavior in the abstract class, but may be overridden in the subclass
+- The Hollywod Principle guides us to put decision making in high-level modules that can decide how and when to call low-level modules
+- Template Method encapsulates algorithms by inheritance, Strategy pattern encapsulates algorithms by composition
+- Factory Method is a specialization of Template Method
