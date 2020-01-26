@@ -15,6 +15,7 @@
 - Strive for loosely coupled designs between objects that interact
 - Classes should be open for extension, but closed for modification
 - Depend upon abstractions. Do not depend upon concrete classes
+- Principle of Least Knowledge: talk only to your immediate friends
 
 ## OO Patterns
 
@@ -25,6 +26,8 @@
 5. **Abstract Factory** - Provides an interface for creating families of related or dependent objects without specifiying their concrete classes.
 6. **Singleton** - Ensures a class has only one instance, and provides a global point of access to it.
 7. **Command** - Encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations
+8. **Adapter** - Converts the interface of a class into another interface the clients expect. Adapter lets clases work together that couldn't otherwise because of incompatible interfaces.
+9. **Facade** - Provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
 
 ## Introduction to Design Patterns
 
@@ -60,18 +63,20 @@
 - Factories encapsulate object creation
 - Factory Method relies on inheritance: object creation is delegated to subclasses, which implement the factory method to create objects
 - Abstract Factory relies on object composition: object creation is implemented in methods exposed in the factory interface
-- Factory patterns promote loose coupling by reducing the depedency of your application on concrete classes
+- Factory patterns promote loose coupling by reducing the dependency of your application on concrete classes
 - Factory Method allows a class to defer instantiation to its subclasses
 - Abstract Factory creates families of related objects without having to depend on their concrete classes
 - Dependency Inversion Principle guides us to avoid dependencies on concrete types and strive for abstractions
 
 ## Singleton Summary
+
 - Singleton ensures you have at most one instane of a class in your application
 - Provides a global access point to that instance
 - Makes use of a private constructor and a static method combined with a static variable
 - Take care when implementing a Singleton for multithreaded applications
 
-## Command
+## Command Summary
+
 - Command pattern decouples an object making a request from the one that knows how to perform it
 - A Command object enables this decoupling and encapsulates a receiver with an action
 - An invoker makes a request of a Command object by calling its execute() method, which invokes those actions on the receive
@@ -80,3 +85,11 @@
 - Macro commands are a simple extension of Command that allow multiple commands to be invoked
 - Commands are typically "dumb" and delegate implementation to a receiver
 - Command can be used to implement logging systems
+
+## Adapter and Facade Summary
+
+- Use an Adapter when you need to use an existing class and it's interface is not the one you need
+- Use a facade when you need to simplify and unify a large interface or complex set of interfaces
+- An Adapter changes an interface into one a client expects
+- A facade decouples a client from a complex subsystem
+- An Adapter wraps an object to change its interface, a Decorator wraps an object to add new behaviors and responsibilities, and a Facade wraps a set of objects to simplify
